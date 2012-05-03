@@ -122,20 +122,7 @@
 ;; End of org-mode generation functions.
 
 (defn -main [calfile & rest]
-  (let [teststring
-        "BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//hacksw/handcal//NONSGML v1.0//EN
-BEGIN:VEVENT
-UID:uid1@example.com
-DTSTAMP:19970714T170000Z
-ORGANIZER;CN=John Doe:MAILTO:john.doe@example.com
-DTSTART:19970714T170000Z
-DTEND:19970715T035959Z
-SUMMARY:Bastille Day Party
-END:VEVENT
-END:VCALENDAR"
-        ics-data (slurp calfile)
+  (let [ics-data (slurp calfile)
         parsed-calendar (ical-to-hash ics-data)
         events (:events parsed-calendar)
         org-events (map event-to-org events)]
