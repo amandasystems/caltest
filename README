@@ -1,0 +1,15 @@
+# caltest
+
+A very simple wrapper around ical4j. Outputs org-mode formatted headings with event start timestamps.
+
+Uh, don't try this with something that's almost but not entirely an icalendar file.
+
+Also: I've never worked with serious java or clojure projects before, and have really no knowledge of the kind of directory structure that leinigen produces. You have been warned.
+
+## Usage
+
+<binary> <icalendar file>. Or, if you prefer, lein run <icalendar file>.
+
+## License
+
+This software is released to the public domain.
